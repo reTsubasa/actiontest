@@ -20,7 +20,7 @@ rm -f .ngrok.log
 ./ngrok authtoken "$NGROK_TOKEN"
 ./ngrok tcp 22 --log ".ngrok.log" &
 
-sleep 10
+sleep 100
 
 HAS_ERRORS=$(grep "command failed" < .ngrok.log)
 
